@@ -40,8 +40,6 @@ while True:
     pygame.display.update()
 
     for i, enemy in enumerate(enemies):
-        # enemy.draw()
-        # pygame.display.update()
         if player.collide(enemy.mask, enemy.rect.x, enemy.rect.y):
             # Play a crash sound
             # pygame.mixer.Sound("crash.wav").play()
