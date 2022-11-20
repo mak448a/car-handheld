@@ -42,7 +42,7 @@ while True:
     for i, enemy in enumerate(enemies):
         if player.collide(enemy.mask, enemy.rect.x, enemy.rect.y):
             # Play a crash sound
-            # pygame.mixer.Sound("crash.wav").play()
+            pygame.mixer.Sound("crash.wav").play()
             pygame.time.delay(500)
             quit()
 
