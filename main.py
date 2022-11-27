@@ -13,13 +13,11 @@ clock = pygame.time.Clock()
 ADDENEMY = pygame.USEREVENT + 1
 pygame.time.set_timer(ADDENEMY, 800)
 
-
 player = Player(display)
 enemies = pygame.sprite.Group()
 enemy = Enemy(display, "m")
 enemies.add(enemy)
 road = Road(display)
-
 
 while True:
     for event in pygame.event.get():
