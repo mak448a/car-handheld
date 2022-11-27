@@ -1,1 +1,2 @@
-Add ui for the flavor enhancer
+Add menus
+Add license
