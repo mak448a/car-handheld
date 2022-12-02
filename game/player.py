@@ -7,7 +7,7 @@ pygame.init()
 
 class Player(Car):
     def __init__(self, display):
-        images = [load_image("player_car.png")]
+        images = [load_image("assets/player_car.png")]
         super(Player, self).__init__(images, display)
         self.rect.y = 60
         self.rect.centerx = display.get_width() / 2

@@ -12,7 +12,7 @@ class Enemy(Car):
 
     def __init__(self, display, direction="m"):
         # Direction must be in this list ["m", "r", "l"]
-        img = load_image("enemy_car_passing.png")
+        img = load_image("assets/enemy_car_passing.png")
         images = [
             pygame.transform.scale(img, (8 / 2, 8 / 2)),
             pygame.transform.scale(img, (8 / 1.5, 8 / 1.5)),

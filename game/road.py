@@ -8,8 +8,8 @@ pygame.init()
 class Road:
     def __init__(self, display):
         self.images = [
-            load_image("road1.png"),
-            load_image("road2.png")
+            load_image("assets/road1.png"),
+            load_image("assets/road2.png")
         ]
         self.display = display
         self.iter = 0
