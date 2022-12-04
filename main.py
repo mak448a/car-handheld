@@ -9,6 +9,7 @@ pygame.init()
 width, height = 200, 100
 display = pygame.display.set_mode((width, height), pygame.SCALED)
 pygame.display.set_caption("Handheld Car Game")
+pygame.display.set_icon(pygame.image.load("assets/icon.png").convert_alpha())
 clock = pygame.time.Clock()
 ADDENEMY = pygame.USEREVENT + 1
 pygame.time.set_timer(ADDENEMY, 800)
