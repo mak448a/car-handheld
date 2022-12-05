@@ -32,6 +32,8 @@ while True:
             quit()
         if event.type == ADDENEMY:
             enemies.add(Enemy(display, game, random.choice(["m", "l", "r"])))
+        if event.type == pygame.KEYDOWN and event.key == pygame.K_f:
+            pygame.display.toggle_fullscreen()
 
     keys = pygame.key.get_pressed()
     player.update(keys)
