@@ -44,7 +44,7 @@ while True:
     player.draw()
 
     score_text = font.render(str(game.score), False, "black")
-    display.blit(score_text, (8, 8))
+    display.blit(score_text, (8, 4))
 
     pygame.display.update()
 
