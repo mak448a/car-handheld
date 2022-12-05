@@ -46,8 +46,6 @@ while True:
     score_text = font.render(str(game.score), False, "black")
     display.blit(score_text, (8, 8))
 
-    print(game.score)
-
     pygame.display.update()
 
     for i, enemy in enumerate(enemies):
