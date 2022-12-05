@@ -10,7 +10,7 @@ class Enemy(Car):
     left_points = [(93, 40), (90, 43), (87, 46), (81, 52), (75, 58), (61, 70), (31, 100)]
     right_points = [(106, 40), (109, 43), (112, 46), (118, 52), (124, 58), (138, 70), (168, 100)]
 
-    def __init__(self, display, direction="m"):
+    def __init__(self, display, game, direction="m"):
         # Direction must be in this list ["m", "r", "l"]
         img = load_image("assets/enemy_car_passing.png")
         images = [
@@ -23,6 +23,7 @@ class Enemy(Car):
             img
         ]
         self.direction = direction
+        self.game = game
         super(Enemy, self).__init__(images, display)
 
         if direction == "m":
@@ -44,6 +45,7 @@ class Enemy(Car):
         # https://www.techwithtim.net/tutorials/game-development-with-python/pygame-tutorial/pygame-animation/
         if self.iter + 1 >= len(self.images) * 4:
             self.iter = 0
+            self.game.score += 1
             # Done with iterations, kill the object
             self.kill()
             return

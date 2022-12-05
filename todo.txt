@@ -1,3 +1,2 @@
 Add menus
 Add license
-Add point counter
