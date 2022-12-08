@@ -45,7 +45,9 @@ def main_game(display, game):
             if player.collide(enemy.mask, enemy.rect.x, enemy.rect.y):
                 # Play a crash sound
                 pygame.mixer.Sound("assets/crash.wav").play()
-                pygame.time.delay(500)
-                quit()
+                game.menu = "crash_menu"
+                return
+                # pygame.time.delay(500)
+                # quit()
 
         clock.tick(30)

@@ -1,6 +1,7 @@
 from main_game import main_game
 import pygame
 from main_menu import MainMenu
+from crash_menu import CrashMenu
 
 pygame.init()
 
@@ -13,7 +14,7 @@ class GameManager:
         pygame.display.set_icon(pygame.image.load("assets/icon.png").convert_alpha())
 
         self.main_menu = MainMenu(self)
-
+        self.crash_menu = CrashMenu(self)
         self.menu = "main_menu"
 
     def main_loop(self):
@@ -24,3 +25,5 @@ class GameManager:
             self.main_menu.main_loop()
         elif self.menu == "main_game":
             self.main_loop()
+        elif self.menu == "crash_menu":
+            self.crash_menu.main_loop()
