@@ -1,6 +1,5 @@
 import pygame
 import game_manager
-from main_menu import MainMenu
 
 pygame.init()
 
