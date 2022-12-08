@@ -3,6 +3,7 @@ from game.enemy import Enemy
 from game.player import Player
 from game.road import Road
 import random
+import sys
 
 pygame.init()
 font = pygame.font.Font("assets/Oven Pixel Font.ttf", 12)
@@ -20,7 +21,7 @@ def main_game(display, game):
     while True:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
-                quit()
+                sys.exit()
             if event.type == ADD_ENEMY:
                 enemies.add(Enemy(display, game, random.choice(["m", "l", "r"])))
             if event.type == pygame.KEYDOWN and event.key == pygame.K_f:
@@ -46,8 +47,7 @@ def main_game(display, game):
                 # Play a crash sound
                 pygame.mixer.Sound("assets/crash.wav").play()
                 game.menu = "crash_menu"
+                game.score = 0
                 return
-                # pygame.time.delay(500)
-                # quit()
 
         clock.tick(30)
