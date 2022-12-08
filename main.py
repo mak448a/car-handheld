@@ -1,3 +1,5 @@
+import time
+
 import pygame
 import game_manager
 from game.enemy import Enemy
@@ -53,7 +55,7 @@ while True:
     for i, enemy in enumerate(enemies):
         if player.collide(enemy.mask, enemy.rect.x, enemy.rect.y):
             # Play a crash sound
-            pygame.mixer.Sound("crash.wav").play()
+            pygame.mixer.Sound("assets/crash.wav").play()
             pygame.time.delay(500)
             quit()
 
