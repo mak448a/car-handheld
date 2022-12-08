@@ -1,5 +1,3 @@
-import time
-
 import pygame
 import game_manager
 from game.enemy import Enemy
