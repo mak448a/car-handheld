@@ -1,0 +1,51 @@
+import pygame
+from game.enemy import Enemy
+from game.player import Player
+from game.road import Road
+import random
+
+pygame.init()
+font = pygame.font.Font("assets/Oven Pixel Font.ttf", 12)
+clock = pygame.time.Clock()
+ADD_ENEMY = pygame.USEREVENT + 1
+pygame.time.set_timer(ADD_ENEMY, 800)
+
+def main_game(display, game):
+    player = Player(display)
+    enemies = pygame.sprite.Group()
+    road = Road(display)
+    # Get rid of extra cars that were added
+    pygame.event.get()
+
+    while True:
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                quit()
+            if event.type == ADD_ENEMY:
+                enemies.add(Enemy(display, game, random.choice(["m", "l", "r"])))
+            if event.type == pygame.KEYDOWN and event.key == pygame.K_f:
+                pygame.display.toggle_fullscreen()
+
+        keys = pygame.key.get_pressed()
+        player.update(keys)
+        enemies.update()
+        road.update()
+
+
+        road.draw()
+        enemies.draw(display)
+        player.draw()
+
+        score_text = font.render(str(game.score), False, "black")
+        display.blit(score_text, (8, 4))
+
+        pygame.display.update()
+
+        for i, enemy in enumerate(enemies):
+            if player.collide(enemy.mask, enemy.rect.x, enemy.rect.y):
+                # Play a crash sound
+                pygame.mixer.Sound("assets/crash.wav").play()
+                pygame.time.delay(500)
+                quit()
+
+        clock.tick(30)
