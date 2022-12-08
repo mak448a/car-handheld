@@ -1,3 +1,4 @@
+import sys
 import pygame
 from button import Button
 
@@ -33,9 +34,12 @@ class MainMenu:
             self.game.display.blit(self.bg, (0, 0))
             for button in self.buttons:
                 button.draw(self.game.display)
-                if button.check_collisions(click) and button.text == "Play!":
-                    self.game.menu = "main_game"
-                    return
+                if button.check_collisions(click):
+                    if button.text == "Play!":
+                        self.game.menu = "main_game"
+                        return
+                    elif button.text == "Quit":
+                        sys.exit(0)
 
             self.game.display.blit(self.text, self.text_rect)
 
