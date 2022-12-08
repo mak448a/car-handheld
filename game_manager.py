@@ -1,7 +1,8 @@
-from main_game import main_game
 import pygame
+from main_game import main_game
 from main_menu import MainMenu
 from crash_menu import CrashMenu
+from utils import load_image
 
 pygame.init()
 
@@ -11,7 +12,7 @@ class GameManager:
         self.width, self.height = 200, 100
         self.display = pygame.display.set_mode((self.width, self.height), pygame.SCALED)
         pygame.display.set_caption("Handheld Car Game")
-        pygame.display.set_icon(pygame.image.load("assets/icon.png").convert_alpha())
+        pygame.display.set_icon(load_image("assets/icon.png"))
 
         self.main_menu = MainMenu(self)
         self.crash_menu = CrashMenu(self)

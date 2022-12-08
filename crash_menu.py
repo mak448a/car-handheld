@@ -1,6 +1,7 @@
 import sys
 import pygame
 from button import Button
+from utils import load_image
 
 pygame.init()
 font = pygame.font.Font("assets/Oven Pixel Font.ttf", 20)
@@ -13,7 +14,7 @@ class CrashMenu:
             Button("Main Menu", (80, 60), 40, 15, "blue", game),
             Button("Quit", (150, 60), 30, 15, "blue", game)
         ]
-        self.bg = pygame.image.load("assets/title.png").convert()
+        self.bg = load_image("assets/title.png")
         self.text = font.render("Car accident.", False, "black")
         self.text_rect = self.text.get_rect()
         self.text_rect.centerx, self.text_rect.centery = game.display.get_rect().centerx, game.display.get_rect().centery - 5
