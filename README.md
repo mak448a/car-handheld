@@ -16,7 +16,7 @@ First, install pygame:
 ```commandline
 pip install pygame
 ```
- Then, run the script.
+ Then, run the game:
 
 Linux/MacOS
 ```commandline
