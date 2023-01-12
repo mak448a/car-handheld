@@ -13,16 +13,16 @@ Font made with [LibreSprite](https://libresprite.github.io/) and [Pixel Font Con
 
 ## How to run
 First, install pygame:
-```commandline
+```shell
 pip install pygame
 ```
  Then, run the game:
 
 Linux/MacOS
-```commandline
+```shell
 python3 main.py
 ```
 Windows
-```commandline
+```shell
 python main.py
 ```
