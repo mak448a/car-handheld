@@ -12,11 +12,11 @@ This game is based off of a handheld game I used to have. It's made with Python 
 Fonts made with [LibreSprite](https://libresprite.github.io/) and [Pixel Font Converter](https://yellowafterlife.itch.io/pixelfont)
 
 ## How to run
-First, install dependencies:
+First, install pygame:
 ```commandline
 pip install pygame
 ```
- Then, run the script.
+ Then, run the game:
 
 Linux/MacOS
 ```commandline
