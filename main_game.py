@@ -11,6 +11,7 @@ clock = pygame.time.Clock()
 ADD_ENEMY = pygame.USEREVENT + 1
 pygame.time.set_timer(ADD_ENEMY, 800)
 
+
 def main_game(display, game):
     player = Player(display)
     enemies = pygame.sprite.Group()
