@@ -3,10 +3,10 @@
 This game is based off of a handheld game I used to have. It's made with Python and pygame.
 
 ## Credits
-- Techwithtim
-- Real Python
-- RockGold
-- mak448a
+- Techwithtim (Code snippet)
+- Real Python (Code snippet)
+- RockGold (artwork)
+- mak448a (game, artwork)
 - [Sojo Bee](https://lospec.com/palette-list/calm37) (color palette)
 
 Font made with [LibreSprite](https://libresprite.github.io/) and [Pixel Font Converter](https://yellowafterlife.itch.io/pixelfont)
